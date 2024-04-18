@@ -35,7 +35,7 @@ app.post('/payment', function(req,res){
             country: 'India',
         }
     }).then((customer) => {
-        return stripe.paymentIntents.create({
+        return stripe.paymentIntents.create({    //for indian payments
             amount: 5000,     
             description: 'Web Development Product',
             currency: 'INR',
